@@ -1,0 +1,18 @@
+* {
+    font-family: sans-serif;
+    
+    --bg-color: #160d16;
+    --fg-color: #eedcee;
+
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+}
+
+.hidden-a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.hidden-a:hover {
+    text-decoration: underline;
+}
