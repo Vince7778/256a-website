@@ -6,3 +6,5 @@
 this main page is in progress
 <br>
 <a href="hw1/">HW1</a>
+<br>
+<a href="test/">test page</a>
