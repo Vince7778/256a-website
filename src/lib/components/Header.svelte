@@ -1,9 +1,21 @@
 <script lang="ts">
-    
+	import Link from "./Link.svelte";
+    import { pageTitle, devMode } from "$lib";
+
+    function toggleDev() {
+        $devMode = !$devMode;
+    }
 </script>
 
+<svelte:head>
+    <title>{$pageTitle || "256a"}</title>
+</svelte:head>
+
 <div class="header">
-    <div class="title"><a href="/" class="hidden-a">Music 256A: Conor Kennedy</a></div>
+    <div class="title"><Link href="/" hide>Music 256A: Conor Kennedy{$pageTitle ? " - " + $pageTitle : ""}</Link></div>
+    <div class="header-right">
+        <button on:click={toggleDev}>dev mode {$devMode ? "on" : "off"}</button>
+    </div>
 </div>
 
 <style>
@@ -16,6 +28,10 @@
         border-bottom: 1px solid var(--fg-color);
         padding: 5px;
         margin: 5px 5px 10px 5px;
+    }
+
+    .header-right {
+        margin-left: auto;
     }
 
     .title {

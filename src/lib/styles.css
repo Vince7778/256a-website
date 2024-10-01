@@ -2,10 +2,22 @@
     font-family: sans-serif;
     
     --bg-color: #160d16;
+    --bg-color-l: #3b103b;
     --fg-color: #eedcee;
 
     background-color: var(--bg-color);
     color: var(--fg-color);
+}
+
+button {
+    border: 1px solid var(--fg-color);
+    border-radius: 5px;
+    padding: 5px 6px 3px 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--bg-color-l);
 }
 
 .hidden-a {

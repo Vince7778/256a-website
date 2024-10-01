@@ -1,15 +1,14 @@
 <script>
 	import Section from "$lib/components/Section.svelte";
+    import { pageTitle } from "$lib";
 
+    $pageTitle = "HW1";
 </script>
 
-<svelte:head>
-    <title>HW1</title>
-</svelte:head>
-
 <Section title="Part 1: Reading Response">
-    Hello, world! I'm going to write some more text in order to test the width bounds of this thing. I mean, it shouldn't be too long after all, right?
-    And do line breaks count as new paragraphs?
-
-    How do I get new paragraphs?
+    <p>Hello, I am testing that the styles of paragraphs are proper.</p>
+    <p>This isn't too close, right? Or too far?</p>
+</Section>
+<Section title="Part 2: Design Etude">
+    <p>Another section! Yay!</p>
 </Section>

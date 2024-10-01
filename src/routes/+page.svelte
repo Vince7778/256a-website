@@ -1,2 +1,8 @@
+<script lang="ts">
+    import { pageTitle } from "$lib";
+    $pageTitle = "";
+</script>
 
-<a href="hw1/">go here</a>
+this main page is in progress
+<br>
+<a href="hw1/">HW1</a>

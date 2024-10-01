@@ -16,6 +16,10 @@ const config = {
 			// these options are set automatically — see below
 			pages: "../256a",
 		}),
+
+		paths: {
+			base: "/~conork/256a",
+		},
 	},
 };
 
