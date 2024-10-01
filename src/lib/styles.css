@@ -4,6 +4,8 @@
     --bg-color: #160d16;
     --bg-color-l: #3b103b;
     --fg-color: #eedcee;
+    /* neutral color */
+    --nt-color: #555555;
 
     background-color: var(--bg-color);
     color: var(--fg-color);

@@ -30,7 +30,7 @@
     </div>
     {#if !minimized}
         <div transition:slide={{ duration: 300, axis: "y" }}>
-            <div class="section-body" bind:this={body}>
+            <div class="section-body" class:sub={sub} bind:this={body}>
                 <slot></slot>
             </div>
             {#if $devMode && !sub}
@@ -72,6 +72,10 @@
     @media only screen and (min-width: 720px) {
         .section-body {
             max-width: 70%;
+        }
+
+        .section-body.sub {
+            max-width: 100%;
         }
     }
 
