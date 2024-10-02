@@ -5,6 +5,6 @@
 </script>
 
 <audio controls {loop}>
-    <source src="{base}{src}" type="audio/mp3">
+    <source src="{base}{src}" type="audio/mp3" />
     Your browser does not support the audio element.
 </audio>

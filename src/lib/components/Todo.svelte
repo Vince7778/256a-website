@@ -1,4 +1,3 @@
-
 <div class="outer-div">
     <div class="inner-div">TODO: <slot /></div>
 </div>

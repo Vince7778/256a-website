@@ -6,6 +6,6 @@
 </script>
 
 <video width={w} height={h} controls>
-    <source src="{base}{src}" type="video/mp4">
+    <source src="{base}{src}" type="video/mp4" />
     Your browser does not support the video tag.
 </video>

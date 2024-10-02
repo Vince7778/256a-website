@@ -1,7 +1,7 @@
 <script lang="ts">
     import { devMode } from "$lib";
-	import { onMount } from "svelte";
-	import { slide } from "svelte/transition";
+    import { onMount } from "svelte";
+    import { slide } from "svelte/transition";
 
     export let title: string;
     export let sub: boolean = false;
@@ -20,23 +20,26 @@
 
     onMount(() => {
         countWords();
-    })
+    });
 </script>
 
 <div class="section">
-    <div class="section-title" class:sub={sub} class:minimized={minimized}>
+    <div class="section-title" class:sub class:minimized>
         {title}
         {#if !sub}
-            <button class="minimize" on:click={minimize}>({minimized ? "expand" : "minimize"})</button>
+            <button class="minimize" on:click={minimize}
+                >({minimized ? "expand" : "minimize"})</button>
         {/if}
     </div>
     {#if !minimized}
         <div transition:slide={{ duration: 300, axis: "y" }}>
-            <div class="section-body" class:sub={sub} bind:this={body}>
+            <div class="section-body" class:sub bind:this={body}>
                 <slot></slot>
             </div>
             {#if $devMode && !sub}
-                <div style="margin-top: 10px; font-family: monospace;">(dev) section word count: {wordCount}</div>
+                <div style="margin-top: 10px; font-family: monospace;">
+                    (dev) section word count: {wordCount}
+                </div>
             {/if}
         </div>
     {/if}

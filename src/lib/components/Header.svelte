@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Link from "./Link.svelte";
+    import Link from "./Link.svelte";
     import { pageTitle, devMode } from "$lib";
 
     function toggleDev() {
@@ -12,7 +12,9 @@
 </svelte:head>
 
 <div class="header">
-    <div class="title"><Link href="/" hide>Music 256A: Conor Kennedy{$pageTitle ? " - " + $pageTitle : ""}</Link></div>
+    <div class="title">
+        <Link href="/" hide>Music 256A: Conor Kennedy{$pageTitle ? " - " + $pageTitle : ""}</Link>
+    </div>
     <div class="header-right">
         <button on:click={toggleDev}>dev mode {$devMode ? "on" : "off"}</button>
     </div>

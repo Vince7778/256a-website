@@ -1,5 +1,5 @@
 <div class="coolbox">
-    <slot /> 
+    <slot />
 </div>
 
 <style>

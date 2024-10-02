@@ -8,7 +8,7 @@
 </script>
 
 <div>
-    <img class:limit={limit !== 0} style="--height-limit: {limit}px" src="{base}{src}" {alt}/>
+    <img class:limit={limit !== 0} style="--height-limit: {limit}px" src="{base}{src}" {alt} />
 </div>
 
 <style>
