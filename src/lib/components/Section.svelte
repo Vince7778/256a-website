@@ -26,7 +26,9 @@
 <div class="section">
     <div class="section-title" class:sub={sub} class:minimized={minimized}>
         {title}
-        <button class="minimize" on:click={minimize}>({minimized ? "expand" : "minimize"})</button>
+        {#if !sub}
+            <button class="minimize" on:click={minimize}>({minimized ? "expand" : "minimize"})</button>
+        {/if}
     </div>
     {#if !minimized}
         <div transition:slide={{ duration: 300, axis: "y" }}>

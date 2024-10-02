@@ -1,12 +1,15 @@
 * {
-    font-family: sans-serif;
-    
     --bg-color: #160d16;
     --bg-color-l: #3b103b;
     --fg-color: #eedcee;
+    --fg-color-d: #d185d1;
     /* neutral color */
     --nt-color: #555555;
 
+    font-family: sans-serif;
+}
+
+body {
     background-color: var(--bg-color);
     color: var(--fg-color);
 }
@@ -16,10 +19,16 @@ button {
     border-radius: 5px;
     padding: 5px 6px 3px 6px;
     cursor: pointer;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
 }
 
 button:hover {
     background-color: var(--bg-color-l);
+}
+
+a {
+    color: var(--fg-color-d);
 }
 
 .hidden-a {
