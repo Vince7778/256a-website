@@ -1,9 +1,25 @@
 <script lang="ts">
     import Link from "./Link.svelte";
     import { pageTitle, devMode } from "$lib";
+    import { goto } from "$app/navigation";
+    import { base } from "$app/paths";
 
     function toggleDev() {
         $devMode = !$devMode;
+    }
+
+    // page title, nav name, url
+    const navLinks = [
+        ["", "Main", "/"],
+        ["HW1", "HW1", "/hw1/"],
+        ["RR1", "RR1", "/rr1/"],
+    ];
+
+    function handleNav(e: Event) {
+        if (e.target) {
+            const target = e.target as HTMLSelectElement;
+            goto(base + target.value);
+        }
     }
 </script>
 
@@ -13,7 +29,15 @@
 
 <div class="header">
     <div class="title">
-        <Link href="/" hide>Music 256A: Conor Kennedy{$pageTitle ? " - " + $pageTitle : ""}</Link>
+        <Link href="/" hide>Music 256A: Conor Kennedy</Link>
+    </div>
+    <div class="nav">
+        <label for="pages">Go to: </label>
+        <select name="pages" id="pages" on:change={handleNav}>
+            {#each navLinks as link}
+                <option value={link[2]} selected={$pageTitle == link[0]}>{link[1]}</option>
+            {/each}
+        </select>
     </div>
     <div class="header-right">
         <button on:click={toggleDev}>dev mode {$devMode ? "on" : "off"}</button>
@@ -39,5 +63,9 @@
     .title {
         font-size: 2em;
         font-weight: bold;
+    }
+
+    .nav {
+        margin-left: 10px;
     }
 </style>

@@ -14,7 +14,8 @@ body {
     color: var(--fg-color);
 }
 
-button {
+button,
+select {
     border: 1px solid var(--fg-color);
     border-radius: 5px;
     padding: 5px 6px 3px 6px;
@@ -23,7 +24,8 @@ button {
     color: var(--fg-color);
 }
 
-button:hover {
+button:hover,
+select:hover {
     background-color: var(--bg-color-l);
 }
 
