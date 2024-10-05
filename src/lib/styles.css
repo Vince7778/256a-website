@@ -3,6 +3,7 @@
     --bg-color-l: #3b103b;
     --fg-color: #eedcee;
     --fg-color-d: #d185d1;
+    --fg-color-t: #eeeeee88;
     /* neutral color */
     --nt-color: #555555;
 
@@ -40,4 +41,8 @@ a {
 
 .hidden-a:hover {
     text-decoration: underline;
+}
+
+p {
+    line-height: 1.3em;
 }

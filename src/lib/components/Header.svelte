@@ -9,10 +9,11 @@
     }
 
     // page title, nav name, url
-    const navLinks = [
+    let navLinks = [
         ["", "Main", "/"],
         ["HW1", "HW1", "/hw1/"],
         ["RR1", "RR1", "/rr1/"],
+        ["RR2", "RR2", "/rr2/"],
     ];
 
     function handleNav(e: Event) {
