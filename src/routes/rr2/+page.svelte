@@ -43,4 +43,12 @@
             constraints.
         </p>
     </Quote>
+    <p>
+        I think this also applies perfectly to both the Ocarina and AIs. These new tools can't
+        replace previous kinds of music because they are actually entirely separate things. They'll
+        mainly allow us to get around previous constraints, like not being able to buy an
+        instrument. As Ge put it in
+        <ArtDes />, by creating electronic instruments or furthering the field of AI, we are being
+        explorers, not destroyers.
+    </p>
 </Section>

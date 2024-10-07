@@ -5,7 +5,7 @@
 
 this main page is in progress
 <br />
-<a href="hw1/">HW1</a>
+use the top bar to navigate!
 <br />
 <a href="test/">test page</a>
 <br />
