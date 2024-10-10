@@ -13,8 +13,8 @@
     <p style="font-size: 2em"><b><u>Storm</u></b></p>
     <p>
         This audio visualizer is themed around a magical lightning storm. The sound frequencies are
-        represented by the swelling ground underneath, and with sudden impacts in the audio, a bolt
-        of lightning will strike, illuminating the ground underneath.
+        represented by the swelling ground, and with sudden impacts in the audio, a bolt of
+        lightning will strike, illuminating the ground underneath.
     </p>
     <Section sub title="Screenshots">
         <div id="captures">
