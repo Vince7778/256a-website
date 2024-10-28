@@ -18,6 +18,7 @@
         ["RR2", "RR2", "/rr2/"],
         ["RR3", "RR3", "/rr3/"],
         ["RR4", "RR4", "/rr4/"],
+        ["RR5", "RR5", "/rr5/"],
     ];
 
     function handleNav(e: Event) {
