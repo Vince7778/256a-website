@@ -1,11 +1,24 @@
 <script>
     import { pageTitle } from "$lib";
     import Image from "$lib/components/Image.svelte";
+    import Link from "$lib/components/Link.svelte";
     import Section from "$lib/components/Section.svelte";
+    import Video from "$lib/components/Video.svelte";
 
     // remember to add to Header.svelte
     $pageTitle = "HW3";
 </script>
+
+<Section title="Milestone B: Something Working">
+    <Video src="/hw3/hw3_milestone.mp4" w={1280} h={720} />
+
+    <Section sub title="Download">
+        <p>
+            <Link href="/hw3/falls-milestone.ck" download="conork_hw3_milestone.ck"
+                >Download ChucK file here</Link>
+        </p>
+    </Section>
+</Section>
 
 <Section title="Milestone A: Research + Preliminary Design">
     <Section sub title="Research">
