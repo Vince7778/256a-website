@@ -9,6 +9,88 @@
     $pageTitle = "HW3";
 </script>
 
+<Section title="HW3: Interactive AudioVisual Music Sequencer">
+    <p style="font-size: 2em"><b><u>Falls</u></b></p>
+    <p>Cascades of sound emerge as magical waterfalls descend down a maze of platforms.</p>
+    <Video src="/hw3/hw3_final.mp4" w={1280} h={720} />
+
+    <Section sub title="Screenshots">
+        <div id="captures">
+            <Image src="/hw3/seq_final_ss1.png" alt="sequencer final screenshot 1" limit={250} />
+            <Image src="/hw3/seq_final_ss2.png" alt="sequencer final screenshot 2" limit={250} />
+            <Image src="/hw3/seq_final_ss3.png" alt="sequencer final screenshot 3" limit={250} />
+            <Image src="/hw3/seq_final_ss4.png" alt="sequencer final screenshot 4" limit={250} />
+        </div>
+    </Section>
+
+    <Section sub title="Instructions">
+        <p>
+            <Link href="/hw3/falls.ck" download="conork_hw3_final.ck"
+                >Download ChucK file here</Link>
+        </p>
+        <p>
+            Use the toolbox in the lower left to place sources and platforms. Arrow keys change the
+            platform's pitch (and hue). Press backspace for a shortcut to delete objects.
+        </p>
+    </Section>
+
+    <Section sub title="Reflection">
+        <p><i>Make sure you watch the video before you read this! (Spoilers!)</i></p>
+        <p>
+            A lot has changed, and a lot hasn't changed from the milestone. I kept the waterfall of
+            course, but instead of sweeping from left to right in a fixed way, you have a lot more
+            control by placing them yourself and choosing their rhythm. Many people had the feedback
+            that there should be multiple streams, so I wanted to satisfy that.
+        </p>
+        <p>
+            The screen rotation idea basically came out of nowhere. I noticed that my original code
+            for calculating the waterfall relied heavily on hard-coding the direction of gravity,
+            and I wondered to myself if I could have the falls go in whatever direction I wanted.
+            After some work (and lots of debugging) I managed to get it to work. I went through a
+            few iterations of this gravity-changing mechanic, and I finally settled on this whole
+            screen rotation idea as kind of a way of breaking the fourth wall. I was really excited
+            when I came up with this idea, and I think it turned out really well. I know tons of
+            people wanted to see the screen fill up with water, but I feel like that would be too
+            expected, so I tried to come up with something new. I think literally nobody will expect
+            something like this to happen.
+        </p>
+        <p>
+            I can't think of any specific thing that was difficult to do in this project. My main
+            obstacle was coming up with good ideas; a bunch of times I coded something and then
+            decided to throw it away since it didn't really fit or didn't feel reasonable to
+            complete. The worst part of coding this was figuring out all the geometry code for
+            calculating the collision and gravity of the waterfall. I have to estimate that 20-30%
+            of the overall time was spent just doing that.
+        </p>
+        <p>
+            If I had more time, I would implement a drum instrument and improve shortcuts. I was
+            halfway through implementing drums when I started to really not like the way I was
+            implementing them, so I discarded it (and came up with the gravity idea instead). I also
+            don't like how arrow keys are the only way to change pitch, but I didn't have time to
+            think of or implement a better system.
+        </p>
+        <p>
+            In terms of system design, I've spent too much time using non-object-oriented languages
+            (Rust my beloved) so the architecture is probably a bit of a mess. Here's my attempt at
+            explaining it:
+        </p>
+        <Image src="/hw3/diagram.png" alt="diagram of code architecture" />
+        <p>
+            Really quick: Platforms create CircleMakers when hit by waterfalls, which make Circles.
+            Sources generate one waterfall each and calculate its path as a set of
+            WaterfallSegments, which interact with Platforms. There is also a global RhythmControl
+            which attaches to a Source and controls its rhythm. A set of tools and a toolbox are
+            created using GGens. Both Platforms and Sources are Deleteable, which lets them be
+            deleted by the delete tool.
+        </p>
+        <p>
+            I didn't collaborate with anyone on this project (and was too busy to go to office
+            hours), but I definitely appreciated the feedback from the milestone, so thanks to
+            everyone in the class for that.
+        </p>
+    </Section>
+</Section>
+
 <Section title="Milestone B: Something Working">
     <Video src="/hw3/hw3_milestone.mp4" w={1280} h={720} />
 
@@ -92,3 +174,12 @@
         <p>This design is three-dimensional, so users can walk around and plant the fruits.</p>
     </Section>
 </Section>
+
+<style>
+    #captures {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0 5px;
+    }
+</style>
