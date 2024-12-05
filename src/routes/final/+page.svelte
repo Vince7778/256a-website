@@ -9,6 +9,10 @@
     $pageTitle = "Final";
 </script>
 
+<Section title="Final Project Milestone 2">
+    <Video src="/final/final_milestone_2.mp4" w={1280} h={720} />
+</Section>
+
 <Section title="Final Project Milestone 1">
     <Video src="/final/final_milestone_1.mp4" w={1280} h={720} />
     <Section sub title="Design 1">
