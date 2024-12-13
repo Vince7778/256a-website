@@ -1,6 +1,7 @@
 * {
     --bg-color: #160d16;
     --bg-color-l: #3b103b;
+    --bg-color-d: #060406;
     --fg-color: #eedcee;
     --fg-color-d: #d185d1;
     --fg-color-t: #eeeeee88;
@@ -41,6 +42,20 @@ a {
 
 .hidden-a:hover {
     text-decoration: underline;
+}
+
+code {
+    font-family: monospace;
+    background-color: var(--bg-color-d);
+    padding: 3px 3px 2px 3px;
+    border: 1px solid var(--fg-color);
+    border-radius: 3px;
+    margin: 1px;
+}
+
+ul {
+    margin: 0px;
+    line-height: 1.3em;
 }
 
 p {

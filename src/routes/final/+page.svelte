@@ -9,6 +9,49 @@
     $pageTitle = "Final";
 </script>
 
+<Section title="Final Project">
+    <p style="font-size: 2em"><b><u>Nothing to See</u></b></p>
+    <p>An audiovisual puzzle platformer... without visuals?</p>
+    <Video src="/final/final_final.mp4" w={1280} h={720} />
+    <Section sub title="Screenshots">
+        <div id="captures">
+            <Image src="/final/final_ss1.png" alt="final project screenshot 1" limit={250} />
+            <Image src="/final/final_ss2.png" alt="final project screenshot 2" limit={250} />
+            <Image src="/final/final_ss3.png" alt="final project screenshot 3" limit={250} />
+            <Image src="/final/final_ss4.png" alt="final project screenshot 4" limit={250} />
+        </div>
+    </Section>
+    <Section sub title="How to run">
+        <p>
+            I have hosted the code on GitHub at <a
+                target="_blank"
+                href="https://github.com/Vince7778/256a-final">this link</a
+            >. I highly recommend just cloning this repository, but in case that doesn't work
+            <Link href="/final/final_code.zip" download="conork_final_code.zip"
+                >here's the zipped code</Link
+            >. Run the code with <code>chuck main.ck</code>.
+        </p>
+        <p>Features:</p>
+        <ul>
+            <li>
+                Full collision detection with walls (adapted from <a
+                    target="_blank"
+                    href="https://github.com/kikito/bump.lua">bump.lua</a
+                >)
+            </li>
+            <li>
+                Audio spatialization engine (adapted from <a
+                    target="_blank"
+                    href="https://miniaud.io/">miniaudio</a
+                >)
+            </li>
+            <li>Text-based level editor</li>
+            <li>In-game replay system to see what you did wrong</li>
+            <li>2,332 lines of ChucK code across 25 files</li>
+        </ul>
+    </Section>
+</Section>
+
 <Section title="Final Project Milestone 2">
     <Video src="/final/final_milestone_2.mp4" w={1280} h={720} />
 </Section>
@@ -46,3 +89,12 @@
         </p>
     </Section>
 </Section>
+
+<style>
+    #captures {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0 5px;
+    }
+</style>
