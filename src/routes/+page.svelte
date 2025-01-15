@@ -1,12 +1,10 @@
 <script lang="ts">
-    import { pageTitle } from "$lib";
+    import { base } from "$app/paths";
+    import { pageTitle, course } from "$lib";
     $pageTitle = "";
+    $course = "";
 </script>
 
-this main page is in progress
-<br />
-use the top bar to navigate!
-<br />
-<a href="test/">test page</a>
-<br />
-<a href="https://github.com/Vince7778/256a-website">github repo</a>
+<p>
+    Go to: <a href="{base}/256a/">MUSIC 256a</a> or <a href="{base}/220b/">MUSIC 220b</a>
+</p>

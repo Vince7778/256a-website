@@ -3,7 +3,7 @@
 </script>
 
 <div class="container">
-    <img src="{base}/artfuldesign.png" alt="artful design logo" />
+    <img src="{base}/256a/artfuldesign.png" alt="artful design logo" />
     <i>Artful Design</i>
 </div>
 

@@ -14,11 +14,11 @@ const config = {
         adapter: adapter({
             // default options are shown. On some platforms
             // these options are set automatically — see below
-            pages: "../256a",
+            pages: "build",
         }),
 
         paths: {
-            base: "/~conork/256a",
+            base: "/~conork",
         },
     },
 };
