@@ -4,8 +4,6 @@
     $pageTitle = "";
 </script>
 
-this main page is in progress
-<br />
-use the top bar to navigate!
+Use the top bar to navigate between the assignments!
 <br />
 <a href="https://github.com/Vince7778/256a-website">github repo</a>
